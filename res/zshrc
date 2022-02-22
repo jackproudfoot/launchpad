@@ -1,0 +1,20 @@
+# z
+. $(brew --prefix)/etc/profile.d/z.sh
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# Colorls
+alias ls='colorls --group-directories-first --almost-all'
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+
+# spaceship prompt settings
+export SPACESHIP_PACKAGE_SHOW="false"
+export SPACESHIP_NODE_SHOW="false"
+export SPACESHIP_DOCKER_SHOW="false"
+export SPACESHIP_KUBECTL_SHOW="true"
+export SPACESHIP_KUBECTL_VERSION_SHOW="false"
+export SPACESHIP_PYENV_SHOW="false"
+export SPACESHIP_CONDA_SHOW="false"
